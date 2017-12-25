@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper" @click="update" id="app">
-        <image :src="logoUrl" class="logo"></image>
+    <div id="app">
+        <topHeader></topHeader>
         <text class="title">cccc {{target}}</text>
         <text class="desc">Now, let's use vue to build your weex app.</text>
         <div id="example">
@@ -37,10 +37,10 @@
 </style>
 
 <script>
+    import topHeader from './topHeader.vue'
     export default {
         el: '#app',
         data: {
-            logoUrl: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
             target: 'World',
             message: 'Hello44441',
             firstName: 'Foo',
@@ -52,6 +52,9 @@
                 vm.fullName = 'John 00000'
                 console.log('target:', this.target)
             }
+        },
+        components:{
+            topHeader
         },
         computed: {
             // 计算属性的 getter
