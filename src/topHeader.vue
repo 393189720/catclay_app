@@ -20,5 +20,6 @@
         color:#fff;
         text-align: center;
         font-size:50px;
+        lines:1;
     }
 </style>

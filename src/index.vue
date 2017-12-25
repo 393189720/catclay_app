@@ -9,6 +9,7 @@
             <p>Computed reversed message2: "{{ message.split('').reverse().join('') }}"</p>
         </div>
         <div id="demo">{{ fullName }}</div>
+        <footer></footer>
     </div>
 </template>
 
@@ -38,6 +39,7 @@
 
 <script>
     import topHeader from './topHeader.vue'
+    import footer from './footer.vue'
     export default {
         el: '#app',
         data: {
@@ -54,7 +56,8 @@
             }
         },
         components:{
-            topHeader
+            topHeader,
+            footer
         },
         computed: {
             // 计算属性的 getter
